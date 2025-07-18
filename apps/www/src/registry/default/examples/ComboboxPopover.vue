@@ -1,8 +1,15 @@
 <script setup lang="ts">
-import type { Icon } from 'lucide-vue-next'
+import {
+  ArrowUpCircle,
+  CheckCircle2,
+  Circle,
+  HelpCircle,
+  XCircle,
+} from 'lucide-vue-next'
+import { type Component, ref } from 'vue'
+
 import { cn } from '@/lib/utils'
 import { Button } from '@/registry/default/ui/button'
-
 import {
   Command,
   CommandEmpty,
@@ -16,19 +23,11 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from '@/registry/default/ui/popover'
-import {
-  ArrowUpCircle,
-  CheckCircle2,
-  Circle,
-  HelpCircle,
-  XCircle,
-} from 'lucide-vue-next'
-import { ref } from 'vue'
 
 interface Status {
   value: string
   label: string
-  icon: Icon
+  icon: Component
 }
 
 const statuses: Status[] = [

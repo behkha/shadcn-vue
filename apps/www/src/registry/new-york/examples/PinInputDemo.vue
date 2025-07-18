@@ -1,10 +1,10 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import {
   PinInput,
   PinInputGroup,
-  PinInputInput,
+  PinInputSlot,
 } from '@/registry/new-york/ui/pin-input'
-import { ref } from 'vue'
 
 const value = ref<string[]>([])
 const handleComplete = (e: string[]) => alert(e.join(''))
@@ -19,7 +19,7 @@ const handleComplete = (e: string[]) => alert(e.join(''))
       @complete="handleComplete"
     >
       <PinInputGroup>
-        <PinInputInput
+        <PinInputSlot
           v-for="(id, index) in 5"
           :key="id"
           :index="index"

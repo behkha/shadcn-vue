@@ -5,8 +5,26 @@ export const containerClass = 'w-full h-full'
 </script>
 
 <script setup lang="ts">
-import { Badge } from '@/registry/default/ui/badge'
+import {
+  CircleUser,
+  Copy,
+  CreditCard,
+  File,
+  Home,
+  LineChart,
+  ListFilter,
+  MoreVertical,
+  Package,
+  Package2,
+  PanelLeft,
+  Search,
+  Settings,
+  ShoppingCart,
+  Truck,
+  Users2,
+} from 'lucide-vue-next'
 
+import { Badge } from '@/registry/default/ui/badge'
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -22,9 +40,9 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel,
 import { Input } from '@/registry/default/ui/input'
 import {
   Pagination,
-  PaginationList,
+  PaginationContent,
   PaginationNext,
-  PaginationPrev,
+  PaginationPrevious,
 } from '@/registry/default/ui/pagination'
 import { Progress } from '@/registry/default/ui/progress'
 import { Separator } from '@/registry/default/ui/separator'
@@ -49,24 +67,6 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from '@/registry/default/ui/tooltip'
-import {
-  CircleUser,
-  Copy,
-  CreditCard,
-  File,
-  Home,
-  LineChart,
-  ListFilter,
-  MoreVertical,
-  Package,
-  Package2,
-  PanelLeft,
-  Search,
-  Settings,
-  ShoppingCart,
-  Truck,
-  Users2,
-} from 'lucide-vue-next'
 </script>
 
 <template>
@@ -774,10 +774,10 @@ import {
                 Updated <time dateTime="2023-11-23">November 23, 2023</time>
               </div>
               <Pagination class="ml-auto mr-0 w-auto" :items-per-page="10">
-                <PaginationList class="gap-1">
-                  <PaginationPrev variant="outline" class="h-6 w-6" />
+                <PaginationContent class="gap-1">
+                  <PaginationPrevious variant="outline" class="h-6 w-6" />
                   <PaginationNext variant="outline" class="h-6 w-6" />
-                </PaginationList>
+                </PaginationContent>
               </Pagination>
             </CardFooter>
           </Card>

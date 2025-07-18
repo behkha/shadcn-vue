@@ -1,11 +1,11 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import {
   PinInput,
   PinInputGroup,
-  PinInputInput,
   PinInputSeparator,
+  PinInputSlot,
 } from '@/registry/default/ui/pin-input'
-import { ref } from 'vue'
 
 const value = ref<string[]>([])
 const handleComplete = (e: string[]) => alert(e.join(''))
@@ -21,7 +21,7 @@ const handleComplete = (e: string[]) => alert(e.join(''))
     >
       <PinInputGroup class="gap-1">
         <template v-for="(id, index) in 5" :key="id">
-          <PinInputInput
+          <PinInputSlot
             class="rounded-md border"
             :index="index"
           />
